@@ -154,7 +154,7 @@ display:block;}
         mix-blend-mode: darken;
       }
 
-      .cls-12, .cls-40, .cls-9 {
+      .cls-12, .cls-40, .cls-52, .cls-9 {
         fill: #404041;
       }
 
@@ -186,7 +186,7 @@ display:block;}
         fill: #91d6e6;
       }
 
-      .cls-20, .cls-46 {
+      .cls-20, .cls-46, .cls-51 {
         fill: #be1e2d;
       }
 
@@ -270,7 +270,7 @@ display:block;}
         fill: #e6e7e8;
       }
 
-      .cls-44 {
+      .cls-44, .cls-53 {
         fill: #1b75bb;
       }
 
@@ -302,6 +302,10 @@ display:block;}
         fill: #ec1c24;
       }
 
-      .cls-51 {
+      .cls-51, .cls-53, .cls-54 {
+        opacity: 0.5;
+      }
+
+      .cls-55 {
         opacity: 0.29;
       }

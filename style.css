@@ -1,0 +1,307 @@
+body {
+  font-family: sans-serif;
+  background: #000000;
+}
+
+
+#LightsSalon1, 
+#LightsSalon2, 
+#LightsCoridor, 
+#LightsBedroomMain, 
+#LightsBedroom, 
+#LightsBath, 
+#LightsKitchen, 
+#LightsLeftPassanger, 
+#LightsRightPassanger, 
+#LightsNeon, 
+#LightsOutside {
+  opacity: 0.05;
+}
+
+#LightsSalon1.lighton, 
+#LightsSalon2.lighton, 
+#LightsCoridor.lighton, 
+#LightsBedroomMain.lighton, 
+#LightsBedroom.lighton, 
+#LightsBath.lighton, 
+#LightsKitchen.lighton, 
+#LightsLeftPassanger.lighton, 
+#LightsRightPassanger.lighton, 
+#LightsNeon.lighton, 
+#LightsOutside.lighton {
+  opacity: 0.5;
+}
+
+#BathVentArrow,
+#BedroomHeaterArrow,
+#MainHeaterArrow,
+#MainVentArrow,
+#KitchenVentArrow,
+#BedroomFloorStair,
+#BedroomFloorMain,
+#BathroomFloor {
+display:none;
+}
+
+#BathVentArrow.show,
+#MainVentArrow.show,
+#KitchenVentArrow.show,
+#MainHeaterArrow.show,
+#BedroomHeaterArrow.show,
+#BedroomFloorStair.show,
+#BedroomFloorMain.show,
+#BathroomFloor.show {
+display:block;}
+
+#BlackWaterStatus,
+#MainHeaterTank,
+#BedroomHeaterTank,
+#WaterEmpty1,
+#WaterEmpty {
+    fill: #ffffff;
+}
+
+#BlackWaterStatus.alert,
+#MainHeaterTank.alert,
+#BedroomHeaterTank.alert,
+#WaterEmpty1.alert,
+#WaterEmpty.alert {
+    fill: #be1e2d;
+}
+
+#BathVentStatus,
+#BathroomFloorHeaterStatus,
+#BedroomFloorHeaterStatus,
+#MainHeaterStatus,
+#MainVentStaus,
+#WaterStatus,
+#Water1Status,
+#KitchenVentStatus,
+#WaterHeaterStatus,
+#BedroomHeaterStatus {
+  fill: #fff100;
+}
+
+#BathVentStatus.active,
+#BathroomFloorHeaterStatus.active,
+#BedroomFloorHeaterStatus.active,
+#MainHeaterStatus.active,
+#MainVentStaus.active,
+#WaterStatus.active,
+#Water1Status.active,
+#KitchenVentStatus.active,
+#WaterHeaterStatus.active,
+#BedroomHeaterStatus.active {
+  fill: #09da00;
+}
+
+
+
+      .cls-1 {
+        isolation: isolate;
+      }
+
+      .cls-2, .cls-8 {
+        fill: #808184;
+      }
+
+      .cls-3, .cls-33 {
+        fill: #929497;
+      }
+
+      .cls-3 {
+        stroke: #3a6db4;
+        stroke-width: 2.43px;
+      }
+
+      .cls-10, .cls-11, .cls-12, .cls-13, .cls-14, .cls-15, .cls-17, .cls-18, .cls-21, .cls-22, .cls-23, .cls-24, .cls-25, .cls-26, .cls-27, .cls-28, .cls-29, .cls-3, .cls-30, .cls-31, .cls-32, .cls-33, .cls-34, .cls-35, .cls-36, .cls-37, .cls-38, .cls-40, .cls-46, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-4 {
+        fill: #6d6e70;
+      }
+
+      .cls-10, .cls-11, .cls-13, .cls-14, .cls-29, .cls-5, .cls-6 {
+        fill: none;
+      }
+
+      .cls-12, .cls-15, .cls-5 {
+        stroke: #000;
+      }
+
+      .cls-14, .cls-30, .cls-5 {
+        stroke-width: 1.22px;
+      }
+
+      .cls-6, .cls-7, .cls-8, .cls-9 {
+        stroke: #ec1c24;
+      }
+
+      .cls-11, .cls-33, .cls-40, .cls-6, .cls-7, .cls-8, .cls-9 {
+        stroke-width: 0.41px;
+      }
+
+      .cls-10, .cls-11, .cls-14, .cls-6, .cls-7, .cls-8, .cls-9 {
+        stroke-dasharray: 4.86;
+      }
+
+      .cls-15, .cls-27, .cls-7 {
+        fill: #58595b;
+      }
+
+      .cls-30, .cls-39, .cls-7, .cls-9 {
+        mix-blend-mode: darken;
+      }
+
+      .cls-12, .cls-40, .cls-9 {
+        fill: #404041;
+      }
+
+      .cls-10, .cls-11, .cls-13, .cls-14, .cls-17, .cls-18, .cls-21, .cls-22, .cls-23, .cls-24, .cls-25, .cls-26, .cls-27, .cls-28, .cls-29, .cls-30, .cls-31, .cls-32, .cls-33, .cls-34, .cls-35, .cls-36, .cls-37, .cls-38 {
+        stroke: #231f20;
+      }
+
+      .cls-10, .cls-12, .cls-15, .cls-17, .cls-18, .cls-21, .cls-22, .cls-23, .cls-24, .cls-25, .cls-26, .cls-27, .cls-28, .cls-29, .cls-31, .cls-34, .cls-35, .cls-36, .cls-37, .cls-38, .cls-46 {
+        stroke-width: 0.81px;
+      }
+
+      .cls-13, .cls-32 {
+        stroke-width: 3.45px;
+      }
+
+      .cls-16, .cls-39 {
+        fill: #231f20;
+      }
+
+      .cls-17 {
+        fill: url(#Pecan);
+      }
+
+      .cls-18 {
+        fill: url(#Pecan-2);
+      }
+
+      .cls-19 {
+        fill: #91d6e6;
+      }
+
+      .cls-20, .cls-46 {
+        fill: #be1e2d;
+      }
+
+      .cls-21 {
+        fill: url(#Pecan-3);
+      }
+
+      .cls-22 {
+        fill: url(#Pecan-4);
+      }
+
+      .cls-23 {
+        fill: #435d7b;
+      }
+
+      .cls-24 {
+        fill: url(#Cast_Iron);
+      }
+
+      .cls-25 {
+        fill: #979397;
+      }
+
+      .cls-26 {
+        fill: url(#Cast_Iron-2);
+      }
+
+      .cls-28 {
+        fill: url(#Pecan-5);
+      }
+
+      .cls-30 {
+        fill: #2e3191;
+      }
+
+      .cls-31 {
+        fill: url(#Cast_Iron-3);
+      }
+
+      .cls-32 {
+        fill: #bbbdbf;
+      }
+
+      .cls-34 {
+        fill: url(#Pecan-6);
+      }
+
+      .cls-35 {
+        fill: url(#Pecan-7);
+      }
+
+      .cls-36 {
+        fill: url(#Pecan-8);
+      }
+
+      .cls-37 {
+        fill: #ee4036;
+      }
+
+      .cls-38, .cls-43, .cls-45, .cls-47 {
+        fill: #fff;
+      }
+
+      .cls-38 {
+        opacity: 0.68;
+      }
+
+      .cls-39 {
+        opacity: 0.4;
+      }
+
+      .cls-40 {
+        stroke: #f1f1f2;
+      }
+
+      .cls-41 {
+        fill: #fff100;
+      }
+
+      .cls-42 {
+        fill: #e6e7e8;
+      }
+
+      .cls-44 {
+        fill: #1b75bb;
+      }
+
+      .cls-45 {
+        font-size: 37.45px;
+      }
+
+      .cls-45, .cls-47 {
+        font-family: OpenSans-Regular, Open Sans;
+      }
+
+      .cls-46 {
+        stroke: #fff;
+      }
+
+      .cls-47 {
+        font-size: 41.39px;
+      }
+
+      .cls-48 {
+        fill: #d1af2b;
+      }
+
+      .cls-49 {
+        fill: #f1f1f2;
+      }
+
+      .cls-50 {
+        fill: #ec1c24;
+      }
+
+      .cls-51 {
+        opacity: 0.29;
+      }

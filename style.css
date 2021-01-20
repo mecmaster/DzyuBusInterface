@@ -3,7 +3,6 @@ body {
   background: #000000;
 }
 
-
 #LightsSalon1, 
 #LightsSalon2, 
 #LightsCoridor, 
@@ -95,6 +94,10 @@ display:block;}
   fill: #09da00;
 }
 
+
+#testcommit {
+fill: #09da00;
+}
 
 
       .cls-1 {

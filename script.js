@@ -1,3 +1,22 @@
+
+//Clock
+    function clock() {
+      let date = new Date();
+      let hrs = date.getHours();
+      let mins = date.getMinutes();
+    
+      hrs = hrs < 10 ? `0${hrs}` : hrs;
+      mins = mins < 10 ? `0${mins}` : mins;
+    
+      let time = `${hrs}:${mins}`;
+      setInterval(clock, 1000);
+      document.getElementById("TimeNow").innerHTML = time;
+    }
+    
+    clock();
+
+
+
 // document.getElementById("LightsSalon1").style.opacity = 0.0;
 // document.getElementById("LightsSalon2").style.opacity = 0.0;
 // document.getElementById("LightsCoridor").style.opacity = 0.0;
@@ -159,3 +178,7 @@ document.getElementById('MainHeaterButton').onclick = function() {
       element2.classList.toggle("show");
 
   };  
+
+
+
+

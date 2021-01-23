@@ -28,21 +28,36 @@ var relay36 = new Boolean(false);
 var relay37 = new Boolean(false);
 var relay38 = new Boolean(false);
 
-function relaystatuschange(relayIPNum, relayNum) {
+function relaychange(relayIPNum, relayNum) {
+        relay201.connect(relayIPNum).then(async (client) => {
+                await client.delay(200);
+                console.log(client.status(relayNum));
+                if (client.status(relayNum) === true) {
+                        await client.off(relayNum);
+                        console.log('status turn off', relayNum, client.status(relayNum));
+                } else {
+                        await client.on(relayNum);
+                        console.log('status turn on', relayNum, client.status(relayNum));
+                }
+                await client.end();
+        }, (err) => {
+                console.log(err);
+        });
+        }
 
-relay201.connect(relayIPNum).then(async (client) => {
-        console.log('status', relayNum, client.status(relayNum));
-
-        await client.on(relayNum);
-        await client.delay(2000);
-        await client.off(relayNum);
-
-        console.log('status', relayNum, client.status(relayNum));
-        await client.end();
-}, (err) => {
-        console.log('error onoff');
-});
-}
+function relayonofftemplate(relayIPNum, relayNum) {
+        relay201.connect(relayIPNum).then(async (client) => {
+                console.log('status', relayNum, client.status(relayNum));
+                await client.on(relayNum);
+                await client.delay(2000);
+                await client.off(relayNum);
+                console.log('status', relayNum, client.status(relayNum));
+                await client.end();
+        }, (err) => {
+                console.log('error onoff');
+        });
+        }
+        
 
 function relaystatuscheck() {
 relay201.connect(relay1).then(async (client) => {
@@ -79,7 +94,9 @@ relay201.connect(relay3).then(async (client) => {
 
 relaystatuscheck();
 
-relaystatuschange(relay1, 2);
+setTimeout(() => {
+relaychange(relay1, 2);
+}, 4000);
 
 setTimeout(() => {
 console.log('Relay 11 outside', relay11);

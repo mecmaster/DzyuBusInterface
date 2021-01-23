@@ -28,9 +28,20 @@ var relay36 = new Boolean(false);
 var relay37 = new Boolean(false);
 var relay38 = new Boolean(false);
 
-
 function relaystatuschange(relayIPNum, relayNum) {
 
+relay201.connect(relayIPNum).then(async (client) => {
+        console.log('status', relayNum, client.status(relayNum));
+
+        await client.on(relayNum);
+        await client.delay(2000);
+        await client.off(relayNum);
+
+        console.log('status', relayNum, client.status(relayNum));
+        await client.end();
+}, (err) => {
+        console.log('error onoff');
+});
 }
 
 function relaystatuscheck() {
@@ -41,7 +52,7 @@ relay201.connect(relay1).then(async (client) => {
 	console.log('relay11', relay11);
 	await client.end();
 }, (err) => {
-        console.log(err);
+        console.log('error relay 1 status');
 });
 
 relay201.connect(relay2).then(async (client) => {
@@ -51,7 +62,7 @@ relay201.connect(relay2).then(async (client) => {
         console.log('relay28', relay28);
         await client.end();
 }, (err) => {
-        console.log(err);
+        console.log('error relay 2 status');
 });
 
 relay201.connect(relay3).then(async (client) => {
@@ -62,11 +73,14 @@ relay201.connect(relay3).then(async (client) => {
 	return relay36;
         await client.end();
 }, (err) => {
-        console.log(err);
+        console.log('error relay 3 status');
 });
 }
 
 relaystatuscheck();
+
+relaystatuschange(relay1, 2);
+
 setTimeout(() => {
 console.log('Relay 11 outside', relay11);
 console.log('Relay 28 outside', relay28);
